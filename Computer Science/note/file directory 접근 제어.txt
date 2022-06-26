@@ -1,0 +1,17 @@
+출처
+https://zeddios.tistory.com/94?category=682196
+
+termial 에서
+ls -l 입력
+
+-  rw-  r--  r--이렇게 4 그룹으로 나눌 수 있어요!!
+
+  -               rw-              r--            r--
+  파일타입    user 권한   Group권한   Other권한
+- : 일반 파일. 실행파일도 포함됩니다.d : 디렉토리를 의미합니다
+
+rw = read and wirte enable.!
+
+ 자리는 Read(읽기권한), Write(쓰기권한), Execute(실행권한)을 나타냅니다
+출처: https://zeddios.tistory.com/94?category=682196 [ZeddiOS:티스토리]
+출처: https://zeddios.tistory.com/94?category=682196 [ZeddiOS:티스토리]
