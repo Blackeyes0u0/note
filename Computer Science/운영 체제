@@ -46,3 +46,72 @@ Appendix
 
 개발 방법 - 롬라이터를 통해 EEPROM에 바이너리를 주입해 구동, 바이너리는 임베디드 크로스 컴파일러 및 cpu를 활용해 c언어 어셈블리어 등 저수준 언어로 개발.
 
+process - impelmenting program , consist of resource adn thread , all process have one more thread
+
+thread - light process, activate done in proccess
+
+diffrence of process and thread
+code. -> code.  <-  code 
+data.  ->  data. <-  data 
+heap  ->  heap.  <-  heap
+stack ->   stack. <-  stack
+thread1.  process.   thread2
+
+process = consist of domain of code, data, heap ,stack 
+        =. each occupy memory space
+        
+thread.=. act in process
+
+thread. advantage = improve throughput of system, reduece resource consumption, reduce recall time
+
+two way of metarilize thread 
+
+1. inherit thread class
+
+2. implement runnable interface
+
+
+ex code)
+
+
+ 
+  
+  public class Test {
+      public static void
+  main(String[] args) {
+          Thread1
+  t1 = new Thread1();
+   
+          Runnable
+  r = new Thread2();
+          Thread t2
+  = new Thread(r);
+   
+         
+  t1.start();
+         
+  t2.start();
+      }
+  }
+   
+  class
+  Thread1 extends Thread {
+      public void run() {
+          for (int i = 0; i < 5; i++) {
+             
+  System.out.println(getName());
+          }
+      }
+  }
+   
+  class
+  Thread2 implements Runnable {
+      public void run() {
+          for (int i = 0; i < 5; i++) {
+             
+  System.out.println(Thread.currentThread().getName());
+          }
+      }
+  }
+출처: https://includestdio.tistory.com/7 [includestdio:티스토리]
+
